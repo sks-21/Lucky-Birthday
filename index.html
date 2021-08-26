@@ -8,23 +8,46 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main>
+    <div class="div-container">
       <h1>Is your Birthday Lucky ??</h1>
       <small>Use our app and find out !</small>
 
       <p>
-        <label for="date">Enter your Birthdate</label>
-        <input type="date" id="date" name="date" />
+        <label for="date" class="label-date">Enter your Birthdate</label>
+        <input type="date" id="date" name="date" class="input-date" />
       </p>
       <p>
-        <label for="num">Enter your Lucky number</label>
-        <input type="number" name="num" id="num" />
+        <label for="num" class="label-num">Enter your Lucky number</label>
+        <input type="number" name="num" id="num" class="input-num" />
       </p>
 
-      <button>Check</button>
+      <p>
+        <button id="check">Check</button>
+        <button id="clear">Clear</button>
+        </p>
 
-      <div id="output"></div>
-    </main>
+      <div id="div-image"></div>
+
+      <div id="output" class="div-output"></div>
+
+
+      <footer>
+        <div class="footer-heading">Let's Connect &#128512 </div>
+        <ul class="list-non-bullet">
+          <li class="list-element-inline">
+            <a href="https://linkedin.com/in/shashank213" class="link-no-decoration">LinkedIn</a>
+          </li>
+          <li class="list-element-inline">
+            <a href="https://github.com/sks-21" class="link-no-decoration">Github</a>
+          </li>
+          <li class="list-element-inline">
+            <a href="https://www.instagram.com/_sks_21_/" class="link-no-decoration">Instagram</a>
+          </li>
+        </ul>
+      </footer>
+
+
+    </div>
 
     <script src="app.js"></script>
   </body>

@@ -1,5 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap");
 
-main{
-    max-width: 600px;
-    margin: auto ;
+:root {
+  --primary-color: #f57c00;
+  --secondary-color: #ff9800;
+  --gray: #424242;
+}
+
+body {
+  overflow: hidden;
+  margin: 0rem;
+  font-family: "Noto Sans JP", sans-serif;
+  /* background-color: #fff3e0; */
+}
+
+.div-container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  /* background-color: #ffe0b2; */
+  background-color: #fff3e0;
+
+  padding-bottom: 1rem;
+  height: 100vh;
+  padding-top: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 0rem;
+  padding-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* small */
+small {
+    /* color: var(--gray); */
+    /* color: red; */
+    margin-bottom: 3rem;
+    display: block;
+  }
+  
+
+/* Input */
+input {
+  font-size: 0.8rem;
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: #e8f5e9;
+  cursor: pointer;
+}
+.input-date {
+  margin-left: 3.3rem;
+}
+.input-num {
+  margin-left: 1.5rem;
+}
+
+/* label */
+label {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+}
+
+/* Button */
+button {
+  margin: 1.5rem;
+  margin-bottom: 0rem;
+  font-size: 0.9em;
+  border-style: none;
+  padding: 1em 2em;
+  border-radius: 30px;
+  cursor: pointer;
+  color: white;
+  background-color: var(--primary-color);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  color: var(--gray);
+}
+
+button:active {
+  background-color: var(--primary-color);
+  transform: translateY(2px);
+  transition: 0.2s;
+  box-shadow: 2px 4px;
+}
+
+/* output */
+.div-output {
+  font-weight: bold;
+  padding: 1em;
+  margin: auto;
+  color: var(--gray);
+}
+
+/* Footer */
+footer {
+  padding: 1em 0em;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 0.2rem;
+  border-top-left-radius: 2rem;
+  text-align: center;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 800px;
+}
+
+.footer-heading {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+footer ul {
+  padding-inline-start: 0px;
+  list-style: none;
+}
+
+footer li {
+  display: inline-block;
+}
+
+footer a {
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  font-weight: bold;
+  color: black;
+  transition: 0.2s;
+}
+
+/* Profit and loss */
+.loss {
+  color: red;
+}
+
+.profit {
+  color: green;
 }
