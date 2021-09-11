@@ -39,17 +39,21 @@ function addImage(ans) {
 }
 
 checkBtn.addEventListener("click", () => {
+  if (imageDiv.children[0]) {
+    imageDiv.children[0].remove();
+  }
 
-if(imageDiv.children[0]) 
- imageDiv.children[0].remove();
+  if (!dateEl.value || !numEl.value) {
+    msg = "Please enter correct values !";
+  } else {
+    let ans = check(dateEl.value, numEl.value);
 
-  let ans = check(dateEl.value, numEl.value);
+    if (ans) msg = "Hurray, your birthday is lucky!";
+    else msg = "Sorry, your birtday is not lucky.";
 
-  if (ans) msg = "Hurray, your birthday is lucky!";
-  else msg = "Sorry, your birtday is not lucky.";
-
-  addImage(ans);
-
+    addImage(ans);
+  }
+  
   outputDiv.innerText = msg;
   dateEl.value = "";
   numEl.value = "";

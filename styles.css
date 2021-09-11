@@ -7,10 +7,8 @@
 }
 
 body {
-  overflow: hidden;
   margin: 0rem;
   font-family: "Noto Sans JP", sans-serif;
-  /* background-color: #fff3e0; */
 }
 
 .div-container {
@@ -105,8 +103,6 @@ footer {
   border-top-left-radius: 2rem;
   text-align: center;
   margin-top: 1rem;
-  position: absolute;
-  bottom: 0;
   width: 800px;
 }
 
@@ -143,4 +139,13 @@ a:hover {
 
 .profit {
   color: green;
+}
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  footer{
+    width: 100%;
+  }
 }
