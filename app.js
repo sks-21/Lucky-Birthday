@@ -4,6 +4,7 @@ let checkBtn = document.querySelector("#check");
 let clearBtn = document.querySelector("#clear");
 let outputDiv = document.querySelector("#output");
 let imageDiv = document.querySelector("#div-image");
+let crossBtn = document.querySelector(".btn-cross");
 
 function check(bDate, num) {
   let sum = 0;
@@ -44,7 +45,7 @@ checkBtn.addEventListener("click", () => {
   }
 
   if (!dateEl.value || !numEl.value) {
-    msg = "Please enter correct values !";
+    msg = "Please enter all the values !";
   } else {
     let ans = check(dateEl.value, numEl.value);
 
@@ -65,3 +66,8 @@ clearBtn.addEventListener("click", () => {
   outputDiv.innerText = " ";
   imageDiv.children[0].remove();
 });
+
+
+crossBtn.addEventListener('click',()=>{
+  crossBtn.parentElement.remove();
+})
