@@ -132,6 +132,10 @@ a:hover {
   transition: 0.2s;
 }
 
+
+.div-image{
+  margin-bottom: 2rem;
+}
 /* Profit and loss */
 .loss {
   color: red;
