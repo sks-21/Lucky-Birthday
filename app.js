@@ -5,6 +5,7 @@ let clearBtn = document.querySelector("#clear");
 let outputDiv = document.querySelector("#output");
 let imageDiv = document.querySelector("#div-image");
 let crossBtn = document.querySelector(".btn-cross");
+let notice = document.querySelector("#privacy-notice");
 
 function check(bDate, num) {
   let sum = 0;
@@ -23,7 +24,7 @@ function check(bDate, num) {
   else return 0;
 }
 
-function addImage(ans) {
+async function addImage(ans) {
   let el = document.createElement("img");
   el.setAttribute("width", "150px");
   el.setAttribute("height", "150px");
@@ -36,7 +37,7 @@ function addImage(ans) {
     el.setAttribute("alt", "sad");
   }
 
-  imageDiv.appendChild(el);
+  await imageDiv.appendChild(el);
 }
 
 checkBtn.addEventListener("click", () => {
@@ -44,17 +45,21 @@ checkBtn.addEventListener("click", () => {
     imageDiv.children[0].remove();
   }
 
+  let ans;
+  //Validating
   if (!dateEl.value || !numEl.value) {
     msg = "Please enter all the values !";
   } else {
-    let ans = check(dateEl.value, numEl.value);
+    if (parseInt(numEl.value) === 0) {
+      ans = 0;
+    } else ans = check(dateEl.value, numEl.value);
 
     if (ans) msg = "Hurray, your birthday is lucky!";
     else msg = "Sorry, your birtday is not lucky.";
 
     addImage(ans);
   }
-  
+
   outputDiv.innerText = msg;
   dateEl.value = "";
   numEl.value = "";
@@ -64,10 +69,10 @@ clearBtn.addEventListener("click", () => {
   dateEl.value = "";
   numEl.value = "";
   outputDiv.innerText = " ";
-  imageDiv.children[0].remove();
+
+  if (imageDiv.children[0]) imageDiv.children[0].remove();
 });
 
-
-crossBtn.addEventListener('click',()=>{
-  crossBtn.parentElement.remove();
-})
+crossBtn.addEventListener("click", () => {
+  notice.style.display = "none";
+});

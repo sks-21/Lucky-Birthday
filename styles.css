@@ -3,7 +3,7 @@
 :root {
   --primary-color: #f57c00;
   --secondary-color: #ff9800;
-  --off-white: #fff3e0 ;
+  --off-white: #fff3e0;
   --gray: #424242;
 }
 
@@ -16,7 +16,6 @@ body {
   max-width: 800px;
   margin: auto;
   text-align: center;
-  /* background-color: #ffe0b2; */
   background-color: var(--off-white);
 
   padding-bottom: 1rem;
@@ -34,34 +33,30 @@ h1 {
 
 /* small */
 small {
-  /* color: var(--gray); */
-  /* color: red; */
   margin-bottom: 1rem;
   display: block;
 }
 
-
 /* span */
 
-span{
+span {
   background-color: #ffcc80;
-  padding:  1em;
-  border-radius: 1.5rem ;
+  padding: 1em;
+  border-radius: 1.5rem;
   margin-bottom: 2rem;
   display: inline;
   text-align: center;
 }
 
-.btn-cross{
-padding: 0.5em;
-/* background-color: #ffcc80; */
+.btn-cross {
+  padding: 0.5em;
 }
 
-.btn-cross:hover{
-  /* background-color: var(--primary-color); */
+.btn-cross:hover {
   background-color: #ffcc80;
-  background-color:var(--off-white);
+  background-color: var(--off-white);
 }
+
 /* Input */
 input {
   font-size: 0.8rem;
@@ -156,7 +151,6 @@ a:hover {
   color: black;
   transition: 0.2s;
 }
-
 
 .div-image {
   margin-bottom: 2rem;
