@@ -55,7 +55,7 @@ checkBtn.addEventListener("click", () => {
     } else ans = check(dateEl.value, numEl.value);
 
     if (ans) msg = "Hurray, your birthday is lucky!";
-    else msg = "Sorry, your birtday is not lucky.";
+    else msg = "Sorry, your birthday is not lucky.";
 
     addImage(ans);
   }
